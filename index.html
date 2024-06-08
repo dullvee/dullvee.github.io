@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Mad is Alika?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-size: cover; /* Ensures the background covers the whole page */
+        transition: background-image 0.5s ease-in-out; /* Smooth transition for background change */
+    }
+    select, button {
+        font-size: 16px;
+        padding: 10px;
+        margin-top: 5px;
+    }
+    #responseMessage {
+        color: red; /* Changed color to red */
+        padding-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h1>How Mad Are You, Alika?</h1>
+    <p>Select your level of anger:</p>
+    <select id="angerLevel" onchange="handleSelection(this.value)">
+        <option value="">Select a level...</option>
+        <option value="A little">A little</option>
+        <option value="A lot">A lot</option>
+    </select>
+
+    <p id="responseMessage"></p>
+
+    <script>
+        function handleSelection(value) {
+            if (value === "A little") {
+                window.location.href = 'happy_kitten.html'; // Redirect to the happy kitten page
+            } else if (value === "A lot") {
+                document.body.style.backgroundImage = "url('sad_kitten.jpg')"; // Use the actual file name for your sad kitten image
+                document.getElementById('responseMessage').innerText = "I am sorry I wasn’t going to pick sides so I agreed with both of you and knew y’all going to make up and forget about it. Flamingo boosy is on me and I will make seafood boil :(";
+            }
+        }
+    </script>
+</body>
+</html>
