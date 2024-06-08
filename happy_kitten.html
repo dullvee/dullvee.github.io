@@ -6,17 +6,24 @@
 <title>Happy Kitten</title>
 <style>
     body {
-        background-image: url('happy_kitten.jpg'); /* Use the actual file name for your happy kitten image */
-        background-size: cover;
-        height: 100vh; /* Full height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
         font-family: Arial, sans-serif;
+        margin: 0; /* Removes default margin */
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        background: #f0f0f0; /* Light grey background */
+    }
+    .kitten-image {
+        max-width: 80%; /* Limits image width to 80% of the viewport width */
+        max-height: 80vh; /* Limits image height to 80% of the viewport height */
+        object-fit: contain; /* Ensures the aspect ratio is maintained without cropping */
+        border: 3px solid #ffffff; /* Optional: adds a white border around the image */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for better contrast */
     }
 </style>
 </head>
 <body>
-    <!-- Removed the heading to just display the background image -->
+    <img src="happy_kitten.jpg" alt="Happy Kitten" class="kitten-image"> <!-- Ensure the src path is correct -->
 </body>
 </html>
